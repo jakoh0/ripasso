@@ -1,0 +1,134 @@
+
+	SELECT *
+	FROM studenti;
+	
+	1.	il numero di maschi e di femmine
+	2. L'elenco degli anni di nascita degli alunni. Con YEAR(DataNascita) si ottiene l'anno cui la data si riferisce.
+	
+	 COUNT(*)		Conteggio
+	 SUM(...)		Somma
+	 MIN(...)		Valore minimo
+	 MAX(...)		Valore massimo
+	 AVG(...)		Valore medio
+	 STDEV(...)	Deviazione standard
+	
+	51. Conteggio studenti totali
+	52. Conteggio studenti raggruppati per genere
+	53. Raggruppare gli studenti per anno, restituendo anche quanti sono (count)
+	...
+	58. Usando la query di sopra, metto insieme tutte le funzioni di aggregazione (eccetto STDEV() che non ci piace)
+	
+	
+	91. Selezionare il gruppo di ragazzi più nemeroso raggruppandoli per anno di nascita
+
+
+
+
+
+	SOLUZIONI
+	
+	
+	
+	il numero di maschi e di femmine
+	SELECT Sesso, COUNT(*) AS NumeroStudenti
+	FROM studenti
+	GROUP BY Sesso;
+	
+	
+	-- 2. L'elenco degli anni di nascita degli alunni.
+	
+	Usando GROUP BY che raggruppa i valori senza dupplicati risultato IDENTICO a PROVA 2
+	SELECT DISTINCT(YEAR(DataNascita)) AS AnnoNascita
+	FROM studenti
+	GROUP BY YEAR(DataNascita)
+	ORDER BY YEAR(DataNascita);
+
+
+-- GRUPPO 51. -> 57.
+	-- 51. Conteggio studenti totali
+	SELECT COUNT(*) AS NumeroStudenti
+	FROM studenti;
+	
+	
+	-- 52. Conteggio studenti raggruppati per genere				
+	
+	SELECT sesso, COUNT(*) AS NumeroStudenti
+	FROM studenti
+	GROUP BY sesso;
+	
+	
+	-- 53. Raggruppare gli studenti per anno, restituendo anche quanti sono (COUNT(*))
+	
+	SELECT YEAR(DataNascita) AnnoNascita, COUNT(*) AS NumeroStudenti
+	FROM studenti
+	GROUP BY YEAR(DataNascita)
+	ORDER BY YEAR(DataNascita);
+	
+	
+	-- 53. Raggruppare gli studenti per anno e sesso, restituendo anche quanti sono (COUNT(*))
+	
+	SELECT YEAR(DataNascita) AnnoNascita, sesso AS Genere, COUNT(*) AS NumeroStudenti
+	FROM studenti
+	GROUP BY YEAR(DataNascita)
+	ORDER BY YEAR(DataNascita);
+	
+	
+	-- 54. Come sopra, ma aggiungo anche il primo e l'ultimo compleanno di ogni anno
+	
+	
+	SELECT YEAR(DataNascita) AnnoNascita, sesso AS Genere, COUNT(*) AS NumeroStudenti,
+		MIN(DataNascita) AS PrimoCompleanno, MAX(DataNascita) AS UltimoCompleanno
+	FROM studenti
+	GROUP BY YEAR(DataNascita)
+	ORDER BY YEAR(DataNascita);
+	
+	
+	-- 55. Calcolo l'età degli studenti
+	
+	SELECT Nome, Cognome, YEAR(CURDATE())- YEAR(DataNascita) AS Eta
+	FROM studenti;
+	
+	
+	
+	
+-- GRUPPO 71. -> ...
+	-- 71. Collegare le tabelle Studenti con città (si fa notare che la tebella studenti ha CittaNascita che è FK in citta.CodiceCatastale)
+	
+	
+	SELECT *
+	FROM studenti
+	LEFT JOIN citta # in una LEFT JOIN 'comanda' 
+		ON studenti.CittaNascita = citta.CodiceCatastale;
+	
+	
+	-- 73. Visualizzare solo gli studenti di Milano, non avendo il campo NomeProvincia nella tabella studenti, devo fare un JOIN con la tabella città
+	
+	
+	SELECT *
+	FROM studenti
+	LEFT JOIN citta
+		ON studenti.CittaNascita = citta.CodiceCatastale
+	WHERE citta.nome = 'Milano';
+	
+	
+	-- 74. VIsualizzare solo gli studenti di Milano e di Torino, non avendo il campo NomeProvincia nella tabella studenti, devo fare un JOIN con la tabella città
+	-- PROVA 1 - uso il comando UNION per unire i milanesi ai torinesi
+	
+	SELECT *
+	FROM studenti
+	LEFT JOIN citta
+		ON studenti.CittaNascita = citta.CodiceCatastale
+	WHERE citta.nome = 'Milano'
+	UNION
+		SELECT *
+	FROM studenti
+	LEFT JOIN citta
+		ON studenti.CittaNascita = citta.CodiceCatastale
+	WHERE citta.nome = 'Torino';
+	
+	
+	
+	
+	
+
+

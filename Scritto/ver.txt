@@ -1,0 +1,68 @@
+Query SQL –
+ Mostra nome, cognome e classe dello studente più anziano. Se riesci dimmi anche quanti anni ha.
+
+
+Elenca gli studenti, il cui nome contiene la lettera ’f’ che sono nati tra settembre e dicembre, ordinati
+per data di nascita.
+
+Calcola la media dei voti per ogni studente (nome, cognome), includendo solo quelli che hanno almeno 2
+voti.
+
+Elencami gli studenti che hanno voti in almeno due materie.
+
+Conta quanti studenti sono presenti in ogni città (Nome della città), ordinando i risultati in ordine
+decrescente.
+
+Per ogni materia, mostra il numero medio di voti solo se la media è maggiore di 6.
+
+
+
+
+
+/*QUERY*/ quasi giuste
+
+3-
+SELECT nome, cognome, Classe,YEAR(CURRENT_DATE)-YEAR(DataNascita) AS Eta, DataNascita
+FROM studenti
+ORDER BY DataNascita 
+LIMIT 1
+
+4-
+SELECT Nome,Cognome, DataNascita
+FROM studenti
+WHERE Nome LIKE '%f%' AND MONTH(DataNascita) >= 09 AND MONTH(DataNascita) <=12
+ORDER BY DataNascita
+
+
+5- 
+SELECT s.Nome, s.Cognome, AVG(v.Voto) AS MediaVoti
+FROM voti AS v
+LEFT JOIN studenti AS s
+ON s.CF = v.CF_Studente
+GROUP BY s.Nome, s.Cognome
+HAVING  COUNT(*) >1
+
+6-
+SELECT s.nome, s.cognome, COUNT(DISTINCT(v.id_Materia)) AS NumeroMaterie 
+FROM voti AS v
+LEFT JOIN studenti AS s
+ON s.CF = v.CF_Studente
+GROUP BY s.nome, s.cognome
+HAVING COUNT(v.id_Materia)> 1
+
+7-
+SELECT c.Nome, Count(*) AS StudentiPerCitta
+FROM citta AS c
+LEFT JOIN studenti AS s 
+ON c.CodiceCatastale = s.CittaNascita
+GROUP BY c.Nome
+ORDER BY Count(*) DESC
+
+8-
+SELECT m.Materia, AVG(v.Voto) AS MediaVoti, COUNT(*) AS NumeroVoti
+FROM materia AS m
+LEFT JOIN voti as v
+ON v.id_Materia = m.id_Materia
+GROUP BY m.Materia
+HAVING  AVG(v.Voto) > 6
+
