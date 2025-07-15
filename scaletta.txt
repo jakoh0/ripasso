@@ -1,0 +1,15 @@
+come costruire una tabella ottimale (normalizzazione)
+	Modello E/R logico e fisico
+		normalizzazione
+		con le varie componenti PK FK 
+		
+introduzione linguaggi dbms
+funzioni + group by
+prove su db
+
+da testo modelo relazionale e logico(al massimo questo)
+
+join
+
+
+

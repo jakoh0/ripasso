@@ -5,18 +5,9 @@
 	1.	il numero di maschi e di femmine
 	2. L'elenco degli anni di nascita degli alunni. Con YEAR(DataNascita) si ottiene l'anno cui la data si riferisce.
 	
-	 COUNT(*)		Conteggio
-	 SUM(...)		Somma
-	 MIN(...)		Valore minimo
-	 MAX(...)		Valore massimo
-	 AVG(...)		Valore medio
-	 STDEV(...)	Deviazione standard
-	
 	51. Conteggio studenti totali
 	52. Conteggio studenti raggruppati per genere
 	53. Raggruppare gli studenti per anno, restituendo anche quanti sono (count)
-	...
-	58. Usando la query di sopra, metto insieme tutte le funzioni di aggregazione (eccetto STDEV() che non ci piace)
 	
 	
 	91. Selezionare il gruppo di ragazzi più nemeroso raggruppandoli per anno di nascita
