@@ -1,0 +1,35 @@
+La normalizzazione è il processo di organizzazione dei dati in un database. Tale processo comprende la creazione di tabelle e la definizione di relazioni tra di esse sulla base di regole progettate in modo da proteggere i dati e rendere il database più flessibile mediante l'eliminazione della ridondanza e delle dipendenze incoerenti.
+La presenza di dati ridondanti comporta uno spreco di spazio su disco nonché problemi di manutenzione. Se è necessario modificare dati presenti in più posizioni, la modifica deve essere effettuata ovunque seguendo le stesse modalità. Ad esempio, è più agevole implementare la modifica relativa all'indirizzo di un cliente se i dati relativi sono memorizzati solo nella tabella Clienti.
+Per la normalizzazione dei database è necessario seguire alcune regole, Ogni regola è chiamata "forma normale". Se viene osservata la prima regola, il database è considerato in "prima forma normale". Se vengono rispettate le prime tre regole, il database è considerato in "terza forma normale". Sebbene siano possibili altri livelli di normalizzazione, la terza forma normale è considerata il livello più alto necessario per la maggior parte delle applicazioni.
+
+Il motivo principale per cui si applica la normalizzazione e quello di evitare le varie anomalie durante il trattamento dei dati nelle varie tabelle:
+
+    -Anomalie di inserimento;
+    -Anomalie di aggiornamento;
+    -Anomalie di cancellazione.
+
+
+Prima forma normale (1FN oppure 1NF)
+Elimina i gruppi ripetitivi di attributi all’interno di una singola tabella, assicurando che ogni attributo sia atomico e indipendente.
+
+    -tutte le righe di una tabella contengono lo stesso numero di colonne;
+    -i valori contenuti nelle colonne rappresentano informazioni elementari (non ulteriormente scomponibili);
+    -ogni istanza dello stesso attributo contiene dati del medesimo tipo e precisione;
+    -i valori contenuti nella stessa colonna appartengono allo stesso dominio;
+    -ogni riga è diversa da tutte le altre (almeno per quanto riguarda il valore della chiave primaria).
+
+
+Seconda forma normale (2FN oppure 2NF)
+Richiede che tutti gli attributi non chiave dipendano funzionalmente dalla chiave primaria intera, evitando dipendenze parziali.
+
+    -soddisfa i requisiti della 1NF;
+    -tutti gli attributi non-chiave presentano una dipendenza funzionale dalla chiave nella sua interezza, ovvero non dipendono
+        solo da una parte della chiave.
+
+
+Terza forma normale (3FN oppure 3NF)
+Elimina le dipendenze transitive tra attributi non chiave, garantendo che ogni dipendenza funzionale sia basata sulla chiave primaria.
+
+    -soddisfa i requisiti della 2NF;
+    -tutti gli attributi non-chiave dipendono soltanto dalla chiave, ovvero non esistono dipendenze funzionali tra attributi non 
+     chiave.

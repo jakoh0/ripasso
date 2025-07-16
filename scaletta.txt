@@ -1,7 +1,8 @@
-come costruire una tabella ottimale (normalizzazione)
+come costruire una tabella ottimale 
 	Modello E/R logico e fisico
 		normalizzazione
 		con le varie componenti PK FK 
+		(con esempio pratico)
 		
 introduzione linguaggi dbms
 funzioni + group by
@@ -10,6 +11,32 @@ prove su db
 da testo modelo relazionale e logico(al massimo questo)
 
 join
+
+
+//SECONDA
+-rivedere struttura comandi
+	create (con i tipi di dato)
+	insert
+	delete
+	drop
+	select
+	update	(ultimo)
+	
+	
+-partire da testo e fare E/R logico e fisico	(/immagini/concettuale)
+
+https://app.diagrams.net/#G17Buyc4E4cEtwbaXu5KtHT99hJVOOe_pb#%7B%22pageId%22%3A%22ZsNkWwB-vSHfCRtwsOss%22%7D
+
+-rimane tempo soluzione delle varie associazioni
+
+
+//TERZA
+oppure fare esercizi con costruzione insieme di db partendo da foto/testo
+
+rivedere velocemente tutto
+teoricamente GROUP BY e funzioni aggregazione eventualmente JOIN
+iniziare query di ricerca 
+		
 
 
 
