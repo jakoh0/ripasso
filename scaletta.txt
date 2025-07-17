@@ -10,32 +10,30 @@ prove su db
 
 da testo modelo relazionale e logico(al massimo questo)
 
-join
+
 
 
 //SECONDA
 -rivedere struttura comandi
-	create (con i tipi di dato)
-	insert
+	create (con i tipi di dato) x
+	insert x
 	delete
 	drop
 	select
 	update	(ultimo)
 	
 	
--partire da testo e fare E/R logico e fisico	(/immagini/concettuale)
+-partire da testo e fare E/R logico e fisico	(/immagini/concettuale) xx circa fatto solo biblioteca
 
 https://app.diagrams.net/#G17Buyc4E4cEtwbaXu5KtHT99hJVOOe_pb#%7B%22pageId%22%3A%22ZsNkWwB-vSHfCRtwsOss%22%7D
 (diagramma che gli avevo mandato)
 
--rimane tempo soluzione delle varie associazioni
+-rimane tempo soluzione delle varie associazioni x visto 
 
 
 //TERZA
-oppure fare esercizi con costruzione insieme di db partendo da foto/testo
-
 rivedere velocemente tutto
-teoricamente GROUP BY e funzioni aggregazione eventualmente JOIN
+fare esercizi con costruzione insieme di db partendo da foto/testo
 iniziare query di ricerca 
 		
 
