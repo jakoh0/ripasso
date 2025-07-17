@@ -26,6 +26,7 @@ join
 -partire da testo e fare E/R logico e fisico	(/immagini/concettuale)
 
 https://app.diagrams.net/#G17Buyc4E4cEtwbaXu5KtHT99hJVOOe_pb#%7B%22pageId%22%3A%22ZsNkWwB-vSHfCRtwsOss%22%7D
+(diagramma che gli avevo mandato)
 
 -rimane tempo soluzione delle varie associazioni
 
