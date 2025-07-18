@@ -1,0 +1,10 @@
+📄 Testo 1 – Gestione di una Biblioteca Universitaria
+
+L’Università possiede una biblioteca in cui sono presenti libri e riviste. Ogni libro ha un codice ISBN, un titolo, almeno un autore, una casa editrice e un anno di pubblicazione. Le riviste sono identificate da un codice ISSN, hanno un titolo e vengono pubblicate periodicamente. Ogni numero della rivista è identificato da numero progressivo, data di pubblicazione e può contenere più articoli scritti da uno o più autori.
+Gli studenti iscritti all’università possono prendere in prestito libri e riviste. Ogni prestito registra la data di inizio, la data prevista di restituzione e la data effettiva di restituzione. Uno studente può avere più prestiti attivi, ma un libro o una rivista non può essere prestato contemporaneamente a più studenti.
+
+
+📄 Testo 2 – Gestione di un Sistema di Car Sharing
+Una società di car sharing gestisce una flotta di veicoli, ciascuno identificato da un codice univoco, con informazioni su marca, modello, targa e stato attuale (disponibile, in uso, in manutenzione). I veicoli possono essere di tipo auto o scooter.
+Gli utenti devono registrarsi al sistema fornendo nome, cognome, email, numero di patente, e una carta di credito valida. Ogni utente può prenotare un veicolo indicando luogo di ritiro, orario di inizio e durata prevista. Alla fine di ogni utilizzo, l’utente deve segnalare il chilometraggio percorso, eventuali danni riscontrati, e luogo di rilascio del veicolo.
+La società tiene traccia degli utilizzi per ogni veicolo e calcola il costo della corsa in base alla durata e al chilometraggio percorso.

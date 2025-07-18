@@ -1,0 +1,31 @@
+📄 Testo 1 – Sistema di Gestione di Eventi Culturali in una Città
+
+Il Comune di una grande città vuole gestire gli eventi culturali che si svolgono durante l’anno 
+(concerti, mostre, spettacoli teatrali, ecc.). Ogni evento è identificato da un codice evento, 
+ha un titolo, una descrizione, un tipo (concerto, mostra, ecc.), una data di inizio, una data di 
+fine e può svolgersi in uno o più luoghi diversi della città (es. una mostra può essere allestita 
+in due musei contemporaneamente). Ogni luogo ha un nome, un indirizzo e una capienza massima.
+Gli eventi sono organizzati da una o più associazioni culturali, ognuna delle quali è registrata 
+con un codice fiscale, un nome, una sede legale, e un referente (nome, cognome, email). 
+Un’associazione può organizzare più eventi, e uno stesso evento può essere co-organizzato da 
+più associazioni. Per alcuni eventi è possibile acquistare biglietti: ogni biglietto ha un numero 
+progressivo, è associato a un evento specifico, ha un prezzo, e contiene i dati del partecipante 
+(nome, cognome, codice fiscale, email). Il sistema deve anche memorizzare la data e l’ora in cui 
+il biglietto è stato acquistato. Ogni partecipante può acquistare più biglietti per eventi diversi.
+
+
+
+📄 Testo 2 – Sistema di Prenotazione per uno Studio Medico Specializzato
+Uno studio medico specializzato gestisce le prenotazioni di visite per diversi medici e tipi di visita. 
+Ogni medico è identificato da un codice interno, e ha nome, cognome, specializzazione e orari di 
+disponibilità (giorni della settimana e fasce orarie). Le visite possono essere di diverso tipo 
+(es. visita cardiologica, ecografia, visita dermatologica), e ogni tipo ha una durata stimata 
+e un costo. I pazienti sono registrati nel sistema con codice fiscale, nome, cognome, data di nascita, 
+numero di telefono ed email. Ogni paziente può prenotare più visite, ma non può prenotare due visite 
+sovrapposte nello stesso giorno.
+
+Ogni prenotazione specifica il tipo di visita, il medico scelto, la data e l’orario desiderato. 
+Il sistema verifica se il medico è disponibile in quella fascia oraria. Una visita può essere disdetta 
+da parte del paziente, e il sistema tiene traccia dello stato: attiva, effettuata, disdetta.
+Alla fine di ogni visita, il medico compila un referto medico, associato alla prenotazione, 
+che contiene una descrizione testuale e può includere allegati (es. PDF, immagini diagnostiche).

@@ -15,8 +15,8 @@ da testo modelo relazionale e logico(al massimo questo)
 
 //SECONDA
 -rivedere struttura comandi
-	create (con i tipi di dato) x
-	insert x
+	create (con i tipi di dato) xx
+	insert xx
 	delete
 	drop
 	select
@@ -25,16 +25,19 @@ da testo modelo relazionale e logico(al massimo questo)
 	
 -partire da testo e fare E/R logico e fisico	(/immagini/concettuale) xx circa fatto solo biblioteca
 
-https://app.diagrams.net/#G17Buyc4E4cEtwbaXu5KtHT99hJVOOe_pb#%7B%22pageId%22%3A%22ZsNkWwB-vSHfCRtwsOss%22%7D
-(diagramma che gli avevo mandato)
-
--rimane tempo soluzione delle varie associazioni x visto 
+-rimane tempo soluzione delle varie associazioni xx visto 
 
 
 //TERZA
 rivedere velocemente tutto
-fare esercizi con costruzione insieme di db partendo da foto/testo
+
+fare esercizi con costruzione insieme di db partendo da foto/testo(preferibilmente testo)
+	da testo per esame di stato il 3 e 4
 iniziare query di ricerca 
+
+//QUARTA
+query di ricerca JOIN teoricamente con struttura anche //anche altri come IN BETWEEN
+esercizio su query e db già creati
 		
 
 
