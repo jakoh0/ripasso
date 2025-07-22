@@ -1,0 +1,38 @@
+DB scuola
+
+1. Elenca gli studenti nati nel mese di gennaio.
+2. Quanti studenti ci sono per ogni classe?
+3. Elenca le classi che iniziano con “5”.
+4. Seleziona tutti gli studenti il cui cognome inizia con "B".
+5. Elenca i codici catastali delle città usati almeno una volta come città di nascita.
+6. Quanti studenti sono nati in ogni città?
+7. Quali studenti sono nati tra il 2005 e il 2006 (inclusi)?
+8. Quanti studenti sono nati in ogni mese?
+9. Trova lo studente più giovane e il più vecchio.
+10. Seleziona gli studenti con codice fiscale che contiene "GAB".
+11. Quante volte compare il nome "Marco"?
+12. Quanti studenti si chiamano con nomi diversi ma hanno lo stesso cognome?
+13. Elenca i nomi e cognomi distinti degli studenti.
+14. Elenca le città di nascita usate più di 5 volte.
+15. Elenca le classi che hanno più di 10 studenti.
+
+
+
+1.  Elenca nome, cognome, e provincia di nascita di ogni studente.
+2.  Elenca gli studenti che hanno preso un voto ≥ 8 in "Matematica".
+3.  Quanti studenti per provincia hanno ottenuto almeno un voto in "Informatica"?
+4.  Elenca per ogni provincia il numero di studenti che vi sono nati.
+5.  Elenca tutti i voti (con materia e tipo verifica) dello studente "BIACAM07B56H501".
+6.  Elenca il numero medio di voti per materia.
+7.  Elenca gli studenti della classe "5B" nati nella provincia di “RM”.
+8.  Mostra per ogni materia la media dei voti orali.
+9.  Quante verifiche orali ha sostenuto ogni studente?
+10. Quanti studenti hanno almeno un voto in ciascuna delle 5 materie?
+11. Elenca le materie per cui è stato assegnato almeno un voto scritto inferiore a 6.
+12. Quanti studenti della provincia di "TV" hanno almeno un voto ≥ 7 in Italiano?
+13. Elenca nome e cognome degli studenti con almeno due voti uguali.
+14. Elenca per ogni classe quante verifiche sono state fatte (scritti/orali).
+15. Qual è la classe con la media voti più alta in “Inglese”?
+
+
+

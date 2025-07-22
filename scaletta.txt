@@ -37,9 +37,12 @@ fare esercizi con costruzione insieme di db partendo da foto/testo(preferibilmen
 iniziare query di ricerca 
 
 //QUARTA
-query di ricerca JOIN teoricamente con struttura anche //anche altri come IN BETWEEN
 esercizio su query e db già creati
 	scuola e ver
+ 
+in teoria 
+query di ricerca JOIN teoricamente con struttura anche //anche altri come IN BETWEEN
+
 	
 
 //QUINTA

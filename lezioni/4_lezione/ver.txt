@@ -1,3 +1,5 @@
+DB verifica
+
 Query SQL –
  Mostra nome, cognome e classe dello studente più anziano. Se riesci dimmi anche quanti anni ha.
 
