@@ -5,7 +5,7 @@ DB scuola
 3. Elenca le classi che iniziano con “5”.
 4. Seleziona tutti gli studenti il cui cognome inizia con "B".
 5. Elenca i codici catastali delle città usati almeno una volta come città di nascita.
-6. Quanti studenti sono nati in ogni città?
+6. Quanti studenti sono nati in ogni città? xxx
 7. Quali studenti sono nati tra il 2005 e il 2006 (inclusi)?
 8. Quanti studenti sono nati in ogni mese?
 9. Trova lo studente più giovane e il più vecchio.
@@ -16,7 +16,7 @@ DB scuola
 14. Elenca le città di nascita usate più di 5 volte.
 15. Elenca le classi che hanno più di 10 studenti.
 
-
+JOIN
 
 1.  Elenca nome, cognome, e provincia di nascita di ogni studente.
 2.  Elenca gli studenti che hanno preso un voto ≥ 8 in "Matematica".

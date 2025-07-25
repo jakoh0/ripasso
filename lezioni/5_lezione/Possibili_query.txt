@@ -1,0 +1,37 @@
+🔹 Query semplici
+    Mostra tutte le notizie presenti nel sistema.
+    Elenca titolo e fonte delle notizie pubblicate dopo il 1° gennaio 2025.
+    Visualizza nome ed email di tutti gli utenti con ruolo “annotatore”.
+    Trova tutte le etichette che indicano una notizia falsa.
+    Elenca i dataset creati dall’utente con ID 2.
+🔹 JOIN tra due tabelle
+
+    Mostra il nome dell’utente che ha creato ciascun dataset.
+    Trova l’email dell’utente che ha etichettato una notizia.
+    Elenca i titoli delle notizie con la relativa categoria associata tramite etichetta.
+    Mostra la descrizione di ciascun evento e il titolo della notizia da cui è stato generato.
+    Per ogni etichettatura effettuata, mostra il titolo della notizia, il nome dell’utente e la categoria assegnata.
+
+🔹 LEFT JOIN (preferiti)
+
+    Elenca tutte le notizie con le rispettive date di etichettatura, se esistono.
+    Visualizza il nome di ogni utente e, se presente, il nome del dataset che ha creato.
+    Elenca i titoli delle notizie e, se presenti, le descrizioni degli eventi ad esse associati.
+    Per ogni notizia, mostra la categoria dell’etichetta, anche se la notizia non è stata ancora etichettata.
+    Mostra i dataset con il numero di notizie a cui è stato assegnato almeno un label, anche se il numero è zero.
+
+🔹 JOIN con condizioni
+
+    Elenca titolo della notizia e nome dell’utente per le notizie etichettate come “dubbia”.
+    Mostra le notizie che hanno ricevuto più di 5 etichette.
+    Per ogni utente, calcola quante etichette ha assegnato dopo il 1° giugno 2025.
+    Trova le notizie che non hanno ancora generato eventi.
+    Elenca i titoli delle notizie presenti in ciascun dataset.
+
+🔹 Aggregazioni con JOIN
+
+    Conta quante notizie sono state etichettate come “vera”, “falsa” o “dubbia”.
+    Conta quante volte ciascun utente ha assegnato ogni tipo di etichetta.
+    Per ogni dataset, conta quante etichette sono state assegnate alle notizie che contiene.
+    Per ogni notizia, conta quanti eventi sono stati generati.
+    Calcola la media del numero di etichette assegnate dagli utenti, raggruppando per ruolo.

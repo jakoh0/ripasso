@@ -47,6 +47,11 @@ query di ricerca JOIN teoricamente con struttura anche //anche altri come IN BET
 
 //QUINTA
 query con tutti quanto	
+trovare testo maturità 2025 e fare tutto tutto
+	riempire di dati e query di ricerca
+
+se c'è tempo anche fare normalizzazione
+
 
 
 
