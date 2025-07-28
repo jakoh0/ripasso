@@ -53,5 +53,16 @@ trovare testo maturità 2025 e fare tutto tutto
 se c'è tempo anche fare normalizzazione
 
 
+//SESTA
+normalizzazione
+con esempi per risolverla
+
+//SETTIMA
+esercizi da testo a DB
+
+//OTTAVA
+query ed testo a DB
+
+
 
 
