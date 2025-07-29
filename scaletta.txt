@@ -60,7 +60,10 @@ con esempi per risolverla
 //SETTIMA
 esercizi da testo a DB
 
+vedere anche teoria con esempi tipo
+
 //OTTAVA
+rivedere cardinalità partendo da E/R già fatto
 query ed testo a DB
 
 
