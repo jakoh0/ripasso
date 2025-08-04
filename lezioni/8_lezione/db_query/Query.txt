@@ -1,0 +1,57 @@
+1- Elenca il numero di notizie per ciascuna tipologia
+
+2- Calcola la media delle validazioni (campo Validazione) fatte da ogni senior
+
+3- Conta quante notizie sono state pubblicate in ogni data
+
+4- Mostra quanti articoli sono stati etichettati per ogni topic
+
+5- Conta quante etichette ha inserito ciascun junior
+
+6- Mostra i titoli delle notizie che hanno almeno un contenuto multimediale
+
+7- Elenca i titoli delle notizie che hanno almeno un contenuto di tipo Video
+
+8- Elenca i titoli delle notizie etichettate come Falso.
+
+9- Mostra le notizie pubblicate tra il 22 e il 27 luglio 2025 (inclusi)
+
+10- Elenca le notizie che non hanno alcuna etichetta associata
+
+11- Quali junior non hanno etichettato alcuna notizia?
+
+12- Quali senior non hanno validato nessuna etichetta?
+
+13- Elenca tutte le etichette in cui la nota contiene la parola "fonte"
+
+14- Elenca le notizie pubblicate dalla testata chiamata TechToday
+
+15- Per ogni notizia, mostra il titolo e la motivazione dell’etichetta (se esiste)
+
+16- Elenca i junior e quante etichette hanno associato (anche se zero)
+
+17- Mostra ogni notizia con il numero totale di contenuti multimediali associati
+
+18- Quali senior hanno validato almeno una etichetta il cui risultato è Falso?
+
+19- Elenca tutte le validazioni mostrando il nome del senior e il topic dell’etichetta
+
+20- Calcola la media delle validazioni per ciascun topic etichettato
+
+21- Qual è la notizia più recente pubblicata? 
+
+22- Per ogni notizia, conta quanti contenuti multimediali ha
+
+23- Quante notizie ha scritto ciascun autore?
+
+24- Quante validazioni accettate (Validazione = 1) ci sono per ogni topic?
+
+25- Elenca le etichette con motivazione Completo ma con una nota diversa da Nessuna
+
+26- Mostra tutti i contenuti multimediali collegati a notizie che non sono state etichettate
+
+27- Elenca le notizie che hanno sia contenuti multimediali che una validazione associata
+
+28- Elenca tutte le testate (campo Nome) che hanno pubblicato più di una notizia
+
+29- Elenca tutte le notizie mostrando anche se sono etichettate o meno

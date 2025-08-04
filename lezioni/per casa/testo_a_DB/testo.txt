@@ -1,0 +1,14 @@
+Una società telefonica desidera dotarsi di un sistema informativo che consenta ai propri tecnici l’accesso on
+line ad una rubrica anagrafica dei contatti, in modo che ciascun componente del gruppo possa consultare in
+ogni momento le informazioni in essa contenute e all’occorrenza aggiornarle (inserire nuovi contatti,
+modificare o eliminare contatti esistenti).
+L’Amministratore del sistema informativo dovrà ampliare il portale al quale accedono abitualmente i membri
+del gruppo aggiungendo questa nuova funzione: ogni componente dovrà essere autenticato dal sistema in uso
+mediante inserimento di credenziali (username e password) in modo da garantire un accesso sicuro alle
+informazioni per cui è autorizzato; le informazioni sono condivise tra più utenti del gruppo di lavoro.
+Al fine di produrre periodicamente statistiche per ottimizzare il lavoro del gruppo si deve tenere traccia di
+ogni accesso al sistema, registrandone le informazioni essenziali (identificatore utente, data e ora di accesso,
+data e ora di fine sessione, …) e le operazioni (consultazioni/aggiornamenti della rubrica dei contatti) svolte
+da ciascun utente autenticato; nel caso di operazioni di aggiornamento è opportuno mantenere anche lo stato
+della rubrica prima della variazione fino a che l’Amministratore del sistema validerà le modifiche e le
+renderà pubbliche.

@@ -1,0 +1,30 @@
+1. Quanti clienti risultano registrati nel sistema?
+2. Quante piscine sono presenti e qual è il numero totale di vasche disponibili?
+3. Quanti clienti hanno attivato ciascun tipo di abbonamento?
+4. Qual è il prezzo medio degli abbonamenti disponibili?
+5. In quale mese si sono registrati più clienti?
+6. Quante prenotazioni ha ricevuto ogni piscina?
+7. Quali piscine hanno ricevuto più di 10 prenotazioni in totale?
+8. Quali clienti hanno effettuato almeno una prenotazione nella piscina chiamata "Piscina Comunale A"?
+9. Quali clienti hanno prenotato tra il 15 e il 20 agosto 2025 (inclusi)?
+10. Quali clienti non hanno mai effettuato una prenotazione?
+11. Quali abbonamenti non sono mai stati assegnati a nessun cliente?
+12. Quali clienti hanno sottoscritto un abbonamento di tipo "Annuale"?
+13. Quali clienti hanno attualmente un abbonamento attivo (in base alla data di oggi)?
+14. Quali clienti hanno sottoscritto più di un abbonamento?
+15. Per ogni cliente, quante prenotazioni ha effettuato in totale?
+16. Quali clienti hanno prenotato più di una volta la stessa piscina?
+17. Quali sono le fasce orarie più prenotate per ciascuna piscina?
+18. Qual è il numero medio di ore prenotate per ciascuna piscina?
+19. Quante prenotazioni sono state effettuate in ciascun giorno?
+20. Quali clienti hanno effettuato prenotazioni in più di una piscina diversa?
+21. Quali clienti hanno un abbonamento mensile ma non hanno mai effettuato una prenotazione?
+22. Per ogni tipo di abbonamento, quanti clienti l’hanno attivato?
+23. Quali piscine non hanno ricevuto nessuna prenotazione durante il mese di agosto 2025?
+24. Quali clienti hanno effettuato solo prenotazioni nella fascia oraria mattutina (prima di mezzogiorno)?
+25. Qual è il giorno con il maggior numero di prenotazioni?
+26. Quali clienti hanno effettuato più prenotazioni, ordinati in ordine decrescente?
+27. Per ogni prenotazione, mostra il nome del cliente e della piscina coinvolta.
+28. Per ogni piscina, quante ore totali sono state prenotate e qual è la media delle ore prenotate?
+
+
