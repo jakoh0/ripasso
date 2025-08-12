@@ -1,0 +1,20 @@
+1. Qual è il numero di prodotti disponibili per ogni categoria?
+2. Qual è il prezzo medio dei prodotti per ciascuna categoria?
+3. Qual è il totale delle scorte disponibili per ogni categoria?
+4. Qual è il numero di ordini effettuati da ciascun cliente?
+5. Qual è la spesa totale (amount) di ciascun cliente?
+6. Qual è il prezzo medio dei prodotti venduti in ciascun ordine?
+7. Quanti ordini sono stati effettuati in ogni mese dell’anno?
+8. Qual è il prodotto più costoso per ciascuna categoria?
+9. Qual è il prodotto meno costoso per ciascuna categoria?
+10. Qual è la quantità totale venduta di ogni prodotto?
+11. Mostra tutte le categorie e i prodotti associati, includendo le categorie senza prodotti.
+12. Mostra tutti i clienti e i relativi ordini, includendo i clienti che non hanno ancora effettuato ordini.
+13. Mostra tutti i prodotti e le opzioni associate, includendo i prodotti senza opzioni.
+14. Mostra tutte le opzioni e i prodotti associati, includendo le opzioni non ancora collegate a nessun prodotto.
+15. Mostra tutti gli ordini e i clienti associati, includendo gli ordini anche se non hanno un cliente valido (es. per dati incompleti).
+16. Mostra tutte le categorie e i prodotti associati, includendo i prodotti anche se non appartengono a nessuna categoria
+17. Calcola il totale delle vendite (price × quantity) per ogni prodotto.
+18. Calcola il totale delle vendite per ogni cliente.
+19. Calcola il totale delle vendite per categoria.
+20. Mostra il numero di ordini e l’importo medio speso per ogni paese dei clienti

@@ -66,6 +66,9 @@ vedere anche teoria con esempi tipo
 rivedere cardinalità partendo da E/R già fatto
 query ed testo a DB
 
+//NONA
+ripasso generale
+
 
 
 
