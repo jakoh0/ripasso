@@ -1,0 +1,19 @@
+Un’associazione culturale intende organizzare una manifestazione pubblica che prevede la presentazione di uno o più
+“contributi” da parte di “espositori”.
+Coloro che intendono diventare espositori devono registrarsi come utenti presso la piattaforma online riservata alla
+manifestazione. L’interessato fornisce i propri dati di registrazione: username di accesso al sistema, una password,
+cognome, nome, indirizzo di posta elettronica, numero di telefono, qualifica (scelta tra: professionista del settore,
+amatore, esperto non professionista) e allega un file in formato pdf con un curriculum vitae in formato europeo.
+Gli utenti registrati possono poi compilare una o più schede di candidatura per proporre un proprio contributo espositivo:
+per ciascuna scheda di candidatura deve essere fornito un titolo (testo fino a 255 caratteri), una sintesi descrittiva (testo
+fino a 2000 caratteri), un’ immagine allegata, un URL che rilancia a pagine di approfondimento, una o più categorie di
+classificazione scelte fra quelle proposte dagli organizzatori.
+Il personale dell’associazione esamina le schede pervenute, registrando sulla piattaforma la loro accettazione o il rifiuto.
+A conclusione di questa fase, un’apposita funzione del sistema di gestione provvede ad inviare agli interessati una email
+di accettazione o di rifiuto per ciascuna candidatura presentata. Le candidature accettate diventano così “contributi” che
+saranno esposti durante la manifestazione.
+Sulla piattaforma online, una sezione ad accesso libero presenta i contributi accettati, nella forma di un elenco con titolo
+e cognome/nome dell’espositore. Selezionando ciascuna riga di tale elenco è possibile chiedere una vista di dettaglio di
+ogni singolo contributo, dove viene mostrato ogni elemento noto del contributo stesso e il curriculum dell’espositore.
+Per esigenze logistiche, la manifestazione viene organizzata raggruppando i diversi espositori in aree, ciascuna delle
+quali ha una capienza massima.
