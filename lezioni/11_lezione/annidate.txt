@@ -1,0 +1,144 @@
+
+**ESERCIZI QUERY ANNIDATE**
+
+1. Trova i nomi degli impiegati che lavorano nel dipartimento del dipendente con il salario più alto.
+
+2. Trova i nomi dei prodotti il cui prezzo è maggiore della media di tutti i prezzi.
+
+3. Trova i nomi dei clienti che hanno fatto ordini con importo maggiore di qualsiasi ordine fatto da un cliente chiamato 'Mario'.
+
+4. Trova i nomi degli studenti che hanno un voto superiore alla media della loro classe.
+
+5. Trova i titoli dei libri pubblicati nell'anno del libro più vecchio.
+
+6. Trova i nomi dei dipendenti che guadagnano più del salario medio.
+
+7. Trova i titoli dei film con durata superiore alla durata media.
+
+8. Trova gli ID degli ordini con importo minore del valore massimo di tutti gli ordini.
+
+9. Trova i nomi dei fornitori che hanno prodotti con prezzo superiore alla media.
+
+10. Trova i nomi dei clienti che non hanno mai fatto un ordine.
+
+---
+
+**SOLUZIONI QUERY ANNIDATE**
+
+1.
+
+
+SELECT nome_impiegato
+FROM impiegati
+WHERE dipartimento_id = (
+    SELECT dipartimento_id
+    FROM impiegati
+    ORDER BY salario DESC
+    LIMIT 1
+);
+
+
+2.
+
+
+SELECT nome_prodotto
+FROM prodotti
+WHERE prezzo > (
+    SELECT AVG(prezzo)
+    FROM prodotti
+);
+
+
+3.
+
+
+SELECT nome_cliente
+FROM ordini
+WHERE importo > (
+    SELECT MAX(importo)
+    FROM ordini o
+    JOIN clienti c ON o.cliente_id = c.cliente_id
+    WHERE c.nome_cliente = 'Mario'
+);
+
+
+4.
+
+
+SELECT nome_studente
+FROM voti v1
+WHERE voto > (
+    SELECT AVG(voto)
+    FROM voti v2
+    WHERE v2.classe_id = v1.classe_id
+);
+
+
+5.
+
+
+SELECT titolo
+FROM libri
+WHERE anno_pubblicazione = (
+    SELECT MIN(anno_pubblicazione)
+    FROM libri
+);
+
+
+6.
+
+
+SELECT nome_dipendente
+FROM dipendenti
+WHERE salario > (
+    SELECT AVG(salario)
+    FROM dipendenti
+);
+
+
+7.
+
+
+SELECT titolo
+FROM film
+WHERE durata > (
+    SELECT AVG(durata)
+    FROM film
+);
+
+
+8.
+
+
+SELECT ordine_id
+FROM ordini
+WHERE importo < (
+    SELECT MAX(importo)
+    FROM ordini
+);
+
+
+9.
+
+
+SELECT DISTINCT nome_fornitore
+FROM fornitori f
+JOIN prodotti p ON f.fornitore_id = p.fornitore_id
+WHERE p.prezzo > (
+    SELECT AVG(prezzo)
+    FROM prodotti
+);
+
+
+10.
+
+
+SELECT nome_cliente
+FROM clienti c
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM ordini o
+    WHERE o.cliente_id = c.cliente_id
+);
+
+
