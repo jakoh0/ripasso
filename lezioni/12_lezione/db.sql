@@ -1,0 +1,80 @@
+-- Creazione del database
+CREATE DATABASE FitZoneDB;
+USE FitZoneDB;
+
+-- Tabella: Cliente
+CREATE TABLE Cliente (
+    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    cognome VARCHAR(50) NOT NULL,
+    data_nascita DATE,
+    email VARCHAR(100) UNIQUE,
+    telefono VARCHAR(20)
+);
+
+-- Tabella: Istruttore
+CREATE TABLE Istruttore (
+    id_istruttore INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    cognome VARCHAR(50) NOT NULL,
+    specializzazione VARCHAR(100),
+    orari_disponibili TEXT
+);
+
+-- Tabella: Corso
+CREATE TABLE Corso (
+    id_corso INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    numero_massimo_partecipanti INT,
+    id_istruttore INT,
+    FOREIGN KEY (id_istruttore) REFERENCES Istruttore(id_istruttore)
+);
+
+-- Tabella ponte: Iscrizione (Cliente-Corso)
+CREATE TABLE Iscrizione (
+    id_cliente INT,
+    id_corso INT,
+    PRIMARY KEY (id_cliente, id_corso),
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_corso) REFERENCES Corso(id_corso)
+);
+
+-- Tabella: Programma Allenamento
+CREATE TABLE Programma (
+    id_programma INT PRIMARY KEY AUTO_INCREMENT,
+    nome_programma VARCHAR(100),
+    id_cliente INT,
+    id_istruttore INT,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_istruttore) REFERENCES Istruttore(id_istruttore)
+);
+
+-- Tabella: Esercizio
+CREATE TABLE Esercizio (
+    id_esercizio INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    descrizione TEXT,
+    durata_minuti INT
+);
+
+-- Tabella ponte: Programma_Esercizio (molti-a-molti)
+CREATE TABLE Programma_Esercizio (
+    id_programma INT,
+    id_esercizio INT,
+    PRIMARY KEY (id_programma, id_esercizio),
+    FOREIGN KEY (id_programma) REFERENCES Programma(id_programma),
+    FOREIGN KEY (id_esercizio) REFERENCES Esercizio(id_esercizio)
+);
+
+-- Tabella: Frequenza (partecipazione a corsi)
+CREATE TABLE Frequenza (
+    id_frequenza INT PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INT,
+    id_corso INT,
+    data_presenza DATE,
+    ora TIME,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_corso) REFERENCES Corso(id_corso),
+    UNIQUE (id_cliente, id_corso, data_presenza, ora)
+);
+

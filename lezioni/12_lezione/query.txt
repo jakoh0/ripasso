@@ -1,0 +1,144 @@
+### 1.
+
+**Richiesta:**
+*Seleziona i clienti che hanno più iscrizioni della media.*
+
+---
+
+### 2.
+
+**Richiesta:**
+*Per ogni unità didattica erogata, quantifica il grado di attrattiva misurato dal flusso di partecipazione attuale, includendo anche quelle unità che non hanno ancora registrato adesioni.*
+
+---
+
+### 3.
+
+**Richiesta:**
+*Associa ogni professionista responsabile delle sessioni con il rispettivo catalogo di attività erogate, riportando simultaneamente il volume di utenza coinvolta per ciascuna delle attività, così da delineare un quadro completo dell’impatto individuale.*
+
+---
+
+### 4.
+
+**Richiesta:**
+*Rileva gli individui che hanno fruito almeno una volta di un intervento diretto da parte di un specifico professionista identificato dal nome e cognome, considerando la partecipazione effettiva e non solo l’iscrizione formale.*
+
+---
+
+### 5.
+
+**Richiesta:**
+*Calcola per ogni piano personalizzato la consistenza quantitativa delle componenti operative previste, valutando la loro estensione in termini di elementi aggregati.*
+
+---
+
+### 6.
+
+**Richiesta:**
+*Determina il valore medio della durata delle singole unità esercitative associate a ciascun piano, al fine di valutare la loro densità temporale complessiva.*
+
+---
+
+### 7.
+
+**Richiesta:**
+*Identifica i soggetti la cui frequenza di partecipazione nell’arco temporale più recente supera una soglia minima, evidenziando coloro che hanno mantenuto un impegno costante.*
+
+---
+
+### 8.
+
+**Richiesta:**
+*Segnala quelle iniziative formative che non hanno ancora generato alcun interesse misurabile in termini di adesioni effettive.*
+
+
+
+2. Popolarità dei corsi
+Per ogni corso, mostra quante persone lo stanno frequentando. Includi anche i corsi senza partecipanti.
+
+3. Attività per istruttore
+Per ogni istruttore, elenca i corsi che gestisce e quante persone partecipano a ciascun corso.
+
+4. Clienti seguiti da un certo istruttore
+Trova i clienti che hanno effettivamente partecipato a un corso condotto da un istruttore specifico (indicato per nome e cognome), non solo quelli iscritti.
+
+5. Numero di esercizi per programma
+Per ogni programma di allenamento, mostra quanti esercizi contiene.
+
+6. Durata media degli esercizi per programma
+Calcola la durata media degli esercizi all’interno di ciascun programma di allenamento.
+
+7. Clienti più costanti di recente
+Trova i clienti che hanno partecipato a molti corsi di recente (es. negli ultimi mesi), superando una soglia minima di presenze.
+
+8. Corsi senza iscritti
+Elenca i corsi a cui nessun cliente si è iscritto.
+
+
+
+
+
+
+
+
+
+1
+SELECT c.id_cliente, c.nome, c.cognome, COUNT(i.id_corso) AS numero_iscrizioni
+FROM Cliente c
+JOIN Iscrizione i ON c.id_cliente = i.id_cliente
+GROUP BY c.id_cliente, c.nome, c.cognome
+HAVING COUNT(i.id_corso) > (SELECT media FROM MediaIscrizioni);
+
+
+2
+SELECT co.id_corso, co.nome, COUNT(i.id_cliente) AS partecipanti
+FROM Corso co
+LEFT JOIN Iscrizione i ON co.id_corso = i.id_corso
+GROUP BY co.id_corso;
+
+3
+SELECT i.nome AS nome_istruttore, i.cognome, c.id_corso, c.nome AS nome_corso, COUNT(iscr.id_cliente) AS numero_partecipanti
+FROM Istruttore i
+JOIN Corso c ON i.id_istruttore = c.id_istruttore
+LEFT JOIN Iscrizione iscr ON c.id_corso = iscr.id_corso
+GROUP BY i.id_istruttore, c.id_corso;
+
+4
+SELECT cl.id_cliente, cl.nome, cl.cognome
+FROM Cliente cl
+JOIN Frequenza f ON cl.id_cliente = f.id_cliente
+JOIN Corso c ON f.id_corso = c.id_corso
+JOIN Istruttore i ON c.id_istruttore = i.id_istruttore
+WHERE i.nome = 'Mario' AND i.cognome = 'Rossi'
+GROUP BY cl.id_cliente, cl.nome, cl.cognome;
+
+5
+SELECT p.id_programma, p.nome_programma, COUNT(pe.id_esercizio) AS numero_esercizi
+FROM Programma p
+LEFT JOIN Programma_Esercizio pe ON p.id_programma = pe.id_programma
+GROUP BY p.id_programma;
+
+6
+SELECT p.id_programma, p.nome_programma, AVG(e.durata_minuti) AS durata_media
+FROM Programma p
+JOIN Programma_Esercizio pe ON p.id_programma = pe.id_programma
+JOIN Esercizio e ON pe.id_esercizio = e.id_esercizio
+GROUP BY p.id_programma;
+
+
+7
+SELECT f.id_cliente, c.nome, c.cognome, COUNT(*) AS presenze_recenti
+FROM Frequenza f
+JOIN Cliente c ON f.id_cliente = c.id_cliente
+WHERE f.data_presenza >= CURDATE() - INTERVAL 30 DAY
+GROUP BY f.id_cliente
+HAVING COUNT(*) >= 5; -- puoi cambiare la soglia minima qui
+
+
+8
+SELECT c.id_corso, c.nome
+FROM Corso c
+LEFT JOIN Iscrizione i ON c.id_corso = i.id_corso
+WHERE i.id_cliente IS NULL;
+

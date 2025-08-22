@@ -1,0 +1,7 @@
+La palestra FitZone gestisce iscrizioni, allenamenti e programmi personalizzati per i suoi clienti.
+
+Ogni cliente è identificato da un codice cliente, ha nome, cognome, data di nascita, email e numero di telefono. I clienti possono iscriversi a uno o più corsi, ciascuno con un nome (es. Yoga, Spinning, CrossFit), un codice corso e un numero massimo di partecipanti. Ogni corso è tenuto da un istruttore, che ha un codice identificativo, nome, cognome, specializzazione e orari disponibili.
+
+Ogni cliente può richiedere un programma di allenamento personalizzato, creato da un istruttore, che include una lista di esercizi. Ogni esercizio ha un nome, una descrizione, una durata e può essere associato a più programmi.
+
+Viene registrata anche la frequenza ai corsi: ogni volta che un cliente partecipa a una lezione, viene salvata la data e l'orario della presenza.
